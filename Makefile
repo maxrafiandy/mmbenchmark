@@ -5,8 +5,8 @@ LINKER += -lpcm -lpthread
 
 CXXFLAGS = -std=c++11 -Wall -O3 -msse4.2 -mavx2 -mfma -fopenmp
 
-#MACRO += -D WITH_COUNTER
-#MACRO += -D PARALLEL_ONLY
+MACRO += -D WITH_COUNTER
+MACRO += -D PARALLEL_ONLY
 #MACRO += -D SERIAL_ONLY
 
 mmbench.x: main.cpp mm.h counter.h
@@ -19,4 +19,4 @@ uninstall:
 	rm /usr/local/bin/mmbench.x
 
 clean:
-	rm mmbench.x
+	rm *.x
